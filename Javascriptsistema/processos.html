@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Processos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="Logo Principal.png" alt="Logo do Meu Site" class="logo">
+        <h1>Gestão de Processos</h1>
+        
+        <!-- Seção de Seleção -->
+        <div id="selecao">
+            <div>
+                <label for="areas">Área:</label>
+                <select id="areas" onchange="loadCargos()">
+                    <option value="">Selecione uma área:</option>
+                </select>
+            </div>
+            <div>
+                <label for="cargos">Cargo:</label>
+                <select id="cargos" onchange="loadProcessos()" disabled>
+                    <option value="">Selecione um cargo:</option>
+                </select>
+            </div>
+            <div>
+                <label for="processos">Processo:</label>
+                <select id="processos" onchange="loadDetalhes()" disabled>
+                    <option value="">Selecione um processo:</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Seção de Detalhes -->
+        <div id="detalhes" style="display: none;">
+            <h2>Detalhes do Processo:</h2>
+            <ul id="detalhes-list"></ul>
+            <div id="fluxograma" style="display: none;">
+                <h2>Fluxograma do Processo:</h2>
+                <img id="fluxograma-imagem" src="" alt="Fluxograma do Processo">
+            </div>
+            <button onclick="voltar()">Voltar</button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
